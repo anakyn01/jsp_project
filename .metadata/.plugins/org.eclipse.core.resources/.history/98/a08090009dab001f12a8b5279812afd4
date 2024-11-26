@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+import="user.UserDAO, java.io.PrintWriter" %>
+<!-- 한글쓰기 캐릭터셋을 강제로 설정 -->
+<% request.setCharacterEncoding("UTF-8"); %>
+<!-- 공통 컴포넌트 설정 -->
+<jsp:useBean id="user" class="user.User" scope="page"/>
+<jsp:setProperty property="userID" name="user"/>
+<jsp:setProperty property="userPassword" name="user"/>
+<jsp:setProperty property="userName" name="user"/>
+<jsp:setProperty property="userGender" name="user"/>
+<jsp:setProperty property="userEmail" name="user"/>
+
+<!-- && and || or-->
+
+<%
+
+if(user.getUserID() == null || user.getUserPassword() == null || user.getUserName()== null || user.getUserGender() == null || user.getUserEmail() == null){//가정법 만약에 입력사항중에 하나라도 값이 없다면
+	PrinterWriter script = response.getWriter();
+    script.println("<script>");
+    script.println("alert('입력이 안된 사항이 있습니다')");
+    script.println("history.back()");
+    script.println("</script>");
+}else{//그렇지 않으면 제대로 다 써져 있다면
+	
+	if(){
+		
+	}else{
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+%>

@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+import="user.UserDAO, java.io.PrintWriter" %>
+<!-- 한글쓰기 캐릭터셋을 강제로 설정 -->
+<% request.setCharacterEncoding("UTF-8"); %>
+<!-- 공통 컴포넌트 설정 -->
+<jsp:useBean id="user" class="user.User" scope="page"/>
+<jsp:setProperty property="userID" name="user"/>
+<jsp:setProperty property="userPassword" name="user"/>
+<jsp:setProperty property="" name="user"/>
+<jsp:setProperty property="" name="user"/>
+<jsp:setProperty property="" name="user"/>

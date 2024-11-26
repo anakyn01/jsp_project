@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+<!-- 이미지를 움직일때 클릭하는 점 -->
+<div class="carousel-indicators">
+	<button data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+	<button data-bs-target="#demo" data-bs-slide-to="1"></button>
+	<button data-bs-target="#demo" data-bs-slide-to="2"></button>
+</div>
+
+<!-- 변동하는 이미지 -->
+<div class="carousel-inner">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!-- 왼쪽 오른쪽 화살표 -->
+
+</div>

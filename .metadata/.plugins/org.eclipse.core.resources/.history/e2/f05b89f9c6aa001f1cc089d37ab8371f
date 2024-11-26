@@ -1,0 +1,58 @@
+package user;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+public class UserDAO {
+
+	private Connection conn;//자바와 데이터 베이스 연결
+	private PreparedStatement pstmt; //쿼리문 대기 및 설정
+	private ResultSet rs;//결과값 받아오기
+	
+	//생성자 메소드마다 반복되는(중복되는) 코드를 간소화 시킴
+	public UserDAO() {
+		try {
+			String dbURL = "jdbc:mysql://localhost:3306/board";
+			String dbID = "root";
+			String dbPassword = "1234";
+			Class.forName("org.mysql.cj.jdbc.Driver");
+			//마리아 db를 사용할 경우 Class.forName("org.mariadb.jdbc.Driver);
+			//JDBC연결 클래스를 'String'타입으로 불러옵니다
+			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
+			//드라이버 매니저에 미리 정장했던 연결 URL과 DB계정 정보를 담아 연결설정을 한다
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/*로그인 메서드
+	로그인 성공(1) 패스워드틀림(0), 아이디 없음(-1), -2(오류)
+	SQL => Structured Query Language
+	select 선택 update 수정, delete 삭제, Insert 삽입 
+	Select Statement
+	:데이터베이스에서 데이터를 선택하는데 사용됩니다
+	where 레코드를 필터링(지정된 조건을 충족하는 레코드만 추출) 하는데 사용됩니다
+	select * from Country(테이블명) where city='seoul';
+	Create(insert) Read(select) Update Delete
+	*/
+	public int login(String userID, String userPassword) {//매개변수로 id, pw
+		
+		String sql = "";
+		try {
+			
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

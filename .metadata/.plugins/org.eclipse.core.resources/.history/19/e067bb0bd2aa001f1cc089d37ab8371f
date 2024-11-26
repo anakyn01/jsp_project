@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="user.User, java.io.PrintWriter"%>
+<!-- user.User 데이터베이스에 접속할 허용된 필드 확인
+java.io.PrintWriter 아이디가 없을경우, 패스워드가 틀릴경우를
+alert창으로 말해줌
+ -->
+<% 
+
+%><!-- 스크립 틀릿 html과 jsp에 자바를 써주는걸  -->

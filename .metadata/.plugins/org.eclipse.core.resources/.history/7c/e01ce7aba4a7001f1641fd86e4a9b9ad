@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ include="include/header.jsp" %><!-- 상단에 들어가는 내비게이션 바-->
+    
+<div class="container"><!-- 화면에서 70% 면적 -->
+<div class="row"><!-- row 한줄 -->
+<div class="col-md-12"><!-- col-lg-12, col-sm-12 -->
+<h1 class="my-5">본문임</h1>
+</div>
+</div>
+</div>
+
+<%@ include="include/footer.jsp" %>

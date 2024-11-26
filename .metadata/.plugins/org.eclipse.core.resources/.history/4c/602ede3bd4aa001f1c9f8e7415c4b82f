@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="user.*, java.io.PrintWriter"%>
+<!-- user.* 데이터베이스에 접속할 허용된 필드 확인
+java.io.PrintWriter 아이디가 없을경우, 패스워드가 틀릴경우를
+alert창으로 말해줌
+ -->
+<% //데이타엑세스 오브젝트에 접속하여 확인
+UserDAO userDAO = new UserDAO();//1)로그인하기위해 입력한 아이디 패스워드를 담아서 확인
+int result = userDAO.login(user.getUserID(), user.getUserPassword());
+%><!-- 스크립 틀릿 html과 jsp에 자바를 써주는걸  -->

@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="include/header.jsp" %>
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<!-- 1)form 으로 랩핑 -->
+<form method="post" action="joinAction.jsp" class="was-validated">
+<h1 class="my-5">Join</h1>
+
+<div class="input-group my-3">
+	<label class="form-label w-25">id</label>
+	<input 
+	type="text" 
+	class="form-control w-75" 
+	placeholder="enter your id" 
+	name="userID" 
+	required="required"
+	/>
+</div>
+
+<div class="input-group my-3">
+	<label class="form-label w-25">
+	pw
+	</label>
+	<input
+	type="password"
+	class="form-control w-75"
+	name="userPassword"
+	placeholder="enter your password"
+	required="required"
+	/>
+</div>
+
+<div class="input-group my-3">
+	<label class="form-label w-25">
+	name
+	</label>
+	<input
+	type="text"
+	class="form-control"
+	placeholder="enter your name"
+	/>
+</div>
+
+<div class="input-group my-3">
+	<label class="form-label w-25">
+	gender
+	</label>
+</div>
+
+<div class="input-group my-3">
+	<label class="form-label">
+	</label>
+	<input
+	/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+</div>
+</div>
+</div>
+
+<%@ include file="include/footer.jsp" %>

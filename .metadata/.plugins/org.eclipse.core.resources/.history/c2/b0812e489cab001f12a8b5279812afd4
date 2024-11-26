@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+import="user.UserDAO, java.io.PrintWriter" %>
+<!-- 한글쓰기 캐릭터셋을 강제로 설정 -->
+<% request.setCharacterEncoding("UTF-8"); %>
+<!-- 공통 컴포넌트 설정 -->
+<jsp:useBean id="user" class="user.User" scope="page"/>
+<jsp:setProperty property="userID" name="user"/>
+<jsp:setProperty property="userPassword" name="user"/>
+<jsp:setProperty property="userName" name="user"/>
+<jsp:setProperty property="userGender" name="user"/>
+<jsp:setProperty property="userEmail" name="user"/>
+
+<!-- && and || or-->
+
+<%
+
+if(){//가정법 만약에 입력사항중에 하나라도 값이 없다면
+	
+}else{//그렇지 않으면 제대로 다 써져 있다면
+	
+	if(){
+		
+	}else{
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+%>

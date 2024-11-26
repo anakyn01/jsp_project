@@ -1,0 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+import="user.UserDAO, java.io.PrintWriter" %>
+<!-- 한글쓰기 캐릭터셋을 강제로 설정 -->
+<% request.setCharacterEncoding(""); %>

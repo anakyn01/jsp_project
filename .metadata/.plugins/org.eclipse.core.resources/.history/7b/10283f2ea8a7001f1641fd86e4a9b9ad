@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%@ include file="include/header.jsp" %><!-- 상단에 들어가는 내비게이션 바-->
+<!-- include 공통모듈을 가져와서 붙이기 -->  
+<div class="container"><!-- 화면에서 70% 면적 -->
+<div class="row"><!-- row 한줄 -->
+<div class="col-md-12"><!-- col-lg-12, col-sm-12 -->
+<h1 class="my-5">본문임</h1>
+</div>
+</div>
+</div>
+
+<%@ include file="include/footer.jsp" %><!-- 하단에 들어가는 푸터 -->
