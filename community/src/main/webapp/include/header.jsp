@@ -19,6 +19,20 @@ java코드를 사용하지 않고 HTML태그 형태로 직관적인 코딩을 �
 </head>
 <body>
 
+<%
+//로그인이 되어있는지 아닌지 체크 세션에 값이 담겨있는지 체크
+String userID = null; //문자 변수 userID = 값을 0을 대입 => 초기화
+//만약 누군가 접속[로그인]을 한다면
+if(session.getAttribute("userID") != null){
+	userID = (String)session.getAttribute("userID");
+}
+/*
+유저아이디 없음 (평상시)
+접속한 유저아이디가 있다면
+그 아이디는 세션을 부여 받는다
+*/
+%>
+
 <nav class="navbar navbar-expand-sm">
 	<div class="container-fluid">
 
@@ -44,15 +58,28 @@ java코드를 사용하지 않고 HTML태그 형태로 직관적인 코딩을 �
 	<li class="nav-item">
 		<a class="nav-link" href="${contextPath}/bbs/bbs.jsp">게시판</a>
 	</li>
-	
+
+<%
+//로그인 하지 않았을때 보여지는 화면
+if(userID == null){
+%>	
 <li class="nav-item dropdown"><!-- 온클릭이벤트로 누를때 메뉴가 하나이상 나올때 그메류를 드롭다운이라고 함 -->
 
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">접속하기</a>	<!-- 제어 -->
+
 
 <ul class="dropdown-menu">
 <li><a class="dropdown-item" href="${contextPath}/member/login.jsp">로그인</a></li>
 <li><a class="dropdown-item" href="${contextPath}/member/member.jsp">회원가입</a></li>
 </ul>
+<%} else {%><!-- 세션이 존재한다면 -->
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="logoutAction.jsp">로그아웃</a></li>
+	</ul>
+</li>
+<%} %>
 	</li>
 	
 	
